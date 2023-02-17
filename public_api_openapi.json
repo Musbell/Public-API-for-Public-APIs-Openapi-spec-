@@ -1,0 +1,176 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Public API for Public APIs",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "servers": [
+    {
+      "url": "https://api.publicapis.org"
+    }
+  ],
+  "paths": {
+    "/entries": {
+      "get": {
+        "summary": "/entries",
+        "description": "/entries",
+        "operationId": "entries",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "name of entry (matches via substring - i.e. \"at\" would return \"cat\" and \"atlas\")"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "description of entry (matches via substring)"
+          },
+          {
+            "name": "auth",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "auth type of entry (can only be values matching in project or null)"
+          },
+          {
+            "name": "https",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "return entries that support HTTPS or not"
+          },
+          {
+            "name": "cors",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "CORS support for entry (\"yes\", \"no\", or \"unknown\")"
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "return entries of a specific category"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/random": {
+      "get": {
+        "summary": "/random",
+        "description": "/random",
+        "operationId": "random",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "name of entry (matches via substring - i.e. \"at\" would return \"cat\" and \"atlas\")"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "description of entry (matches via substring)"
+          },
+          {
+            "name": "auth",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "auth type of entry (can only be values matching in project or null)"
+          },
+          {
+            "name": "https",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "return entries that support HTTPS or not"
+          },
+          {
+            "name": "cors",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "CORS support for entry (\"yes\", \"no\", or \"unknown\")"
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "description": "return entries of a specific category"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/categories": {
+      "get": {
+        "summary": "/categories",
+        "description": "/categories",
+        "operationId": "categories",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "/health",
+        "description": "/health",
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

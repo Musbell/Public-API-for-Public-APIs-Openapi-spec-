@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "c36a689e-e0e3-42b1-9be5-3155f3ebb064",
+		"name": "Public API for Public APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2244684"
+	},
+	"item": [
+		{
+			"name": "/entries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "",
+							"description": "name of entry (matches via substring - i.e. \"at\" would return \"cat\" and \"atlas\")",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "",
+							"description": "description of entry (matches via substring)",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": "",
+							"description": "auth type of entry (can only be values matching in project or null)",
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": "",
+							"description": "return entries that support HTTPS or not",
+							"disabled": true
+						},
+						{
+							"key": "cors",
+							"value": "",
+							"description": "CORS support for entry (\"yes\", \"no\", or \"unknown\")",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "",
+							"description": "return entries of a specific category",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/random",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/random",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"random"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "",
+							"description": "name of entry (matches via substring - i.e. \"at\" would return \"cat\" and \"atlas\")",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "",
+							"description": "description of entry (matches via substring)",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": "",
+							"description": "auth type of entry (can only be values matching in project or null)",
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": "",
+							"description": "return entries that support HTTPS or not",
+							"disabled": true
+						},
+						{
+							"key": "cors",
+							"value": "",
+							"description": "CORS support for entry (\"yes\", \"no\", or \"unknown\")",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "",
+							"description": "return entries of a specific category",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/categories",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/health",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
