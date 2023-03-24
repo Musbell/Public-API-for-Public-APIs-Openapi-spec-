@@ -3,7 +3,8 @@
   "info": {
     "title": "Public API for Public APIs",
     "version": "1.0.0",
-    "contact": {}
+    "contact": {},
+    "description": "The API provides several endpoints that allow users to search for information about available public APIs. "
   },
   "servers": [
     {
@@ -13,9 +14,10 @@
   "paths": {
     "/entries": {
       "get": {
+        "tags": ["Entries"],
         "summary": "/entries",
-        "description": "/entries",
         "operationId": "entries",
+        "description": "search for APIs based on several query parameters, including title, description, auth, https, cors, and category.",
         "parameters": [
           {
             "name": "title",
@@ -81,8 +83,9 @@
     },
     "/random": {
       "get": {
+        "tags": ["Random"],
         "summary": "/random",
-        "description": "/random",
+        "description": "retrieve a random API based on the same query parameters as the /entries endpoint.",
         "operationId": "random",
         "parameters": [
           {
@@ -149,8 +152,9 @@
     },
     "/categories": {
       "get": {
+        "tags": ["Categories"],
         "summary": "/categories",
-        "description": "/categories",
+        "description": "Returns a list of available API categories.",
         "operationId": "categories",
         "responses": {
           "200": {
@@ -161,8 +165,9 @@
     },
     "/health": {
       "get": {
+        "tags": ["Health"],
         "summary": "/health",
-        "description": "/health",
+        "description": "Check the status of the API.",
         "operationId": "health",
         "responses": {
           "200": {
@@ -172,5 +177,18 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Entries"
+    },
+    {
+      "name": "Random"
+    },
+    {
+      "name": "Categories"
+    },
+    {
+      "name": "Health"
+    }
+  ]
 }
